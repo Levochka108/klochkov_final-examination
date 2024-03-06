@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Сайт рецептов</h1>
+<h2>Главная страница</h2>
+<!-- Здесь отображается информация о 5 случайных рецептах -->
+{% for recipe in random_recipes %}
+<div>
+    <h2>{{ recipe.title }}</h2>
+    <p>{{ recipe.description }}</p>
+</div>
+{% endfor %}
+{% endblock %}
